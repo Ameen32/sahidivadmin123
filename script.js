@@ -26,17 +26,77 @@ const messageElement = document.getElementById('message');
 
 // സ്റ്റാറ്റിക് വിഭാഗങ്ങളും പ്രോഗ്രാമുകളും (നിങ്ങളുടെ ആവശ്യമനുസരിച്ച് മാറ്റുക)
 const availableData = {
-    "General": ["Collage", "Nasheeda", "Viplavagana Rachana", "Mappilappatt Rachana", "Spot Magazine", "Group Song (Category-a)", "Group Song (Category-b)", "Moulid Recitation", "Qaseeda Recitation", "Viplava Ganam", "Chumarezhuth", "Malappattu", "Risala Quiz", "Qawwali", "Project"],
-    "High School": ["Elocution English", "Elocution Malayalam", "Mappilappattu", "Madhu Ganam", "Poem Recitation (Arabic)", "Poem Recitation (Malayalam)", "Quiz", "Story Writing", "Poem Making", "Pencil Drawing", "Water Colouring", "Poem Recitation (Urdu)", "Book Test", "Essay Writing (Malayalam)", "News Reading", "Caption Writing", "Language Game (English)", "Pencil Drawing(girls)", "Water Colour(girls)", "Story Writing(girls)", "Poem Making(girls)", "EMBROIDERY(Girls)"],
-    "Higher Sec": ["Elocution", "Mappilappattu", "Bakthi Ganam", "Story Writing", "Poem Making", "Essay Writing (Malayalam)", "Essay Writing (English)", "Quiz", "Pencil Drawing", "Water Colouring", "Book Test", "News Writing", "Calligraphy (Arabic)", "Poem Recitation (Urdu)", "Calligraphy Arabic(girls)", "Story Writing(girls)", "Poem Making(girls)", "Reel Making", "Digital Painting"],
-    "Junior": ["Mappilappattu", "Elocution (Malayalam)", "Elocution (Arabic)", "Elocution (English)", "Poem Making", "Story Writing", "Book Test", "Essay Writing (Malayalam)", "Essay Writing (Arabic)", "Mudravakya Rachana", "Madhu Gana Rachana", "Quiz", "Translation (Arabic)", "Calligraphy (Arabic)", "Social Text", "Hadees Musabaqa", "Ai Poem Making"],
-    "Lower Primary": ["Elocution", "Madhu Song", "Quiz", "Story Telling", "Pencil Drawing", "Water Colouring", "Bhasha Keli", "Reading (Malayalam)", "Reading (Arabi Malayalam)", "Book Test", "Water Colouring(girls)", "Pencil Drawing(girls)", "Journal Art (Girls)"],
-    "Senior": ["Mappilappattu", "Elocution (Malayalam)", "Elocution (English)", "Poem Making", "Story Writing", "Book Test", "Essay Writing (Malayalam)", "Essay Writing (English)", "Madhu Gana Rachana", "Quiz", "Feature Writing", "Social Text", "Poem Making (English)", "Translation (English)", "Poster Designing", "Digital Illustration", "E Poster", "Elocution (Urdu)", "Hamd (Urdu)", "Poem Recitation (English)", "Musha'ara Alfiyya", "Essay Writing (Urdu)", "Mudravakya Rachana", "Digital Painting"],
-    "Upper Primary": ["Elocution", "Mappilappattu", "Story Telling", "Ganitha Keli", "Quiz", "Pencil Drawing", "Water Colouring", "Story Writing", "Book Test", "Spelling Bee", "Pencil Drawing(girls)", "Water Colouring(girls)", "Story Writing(girls)", "Sudoku", "Origami(girls)"],
-    "Campus girls": ["Elocution", "Mappilappattu", "Story Telling", "Ganitha Keli", "Quiz", "Pencil Drawing", "Water Colouring", "Story Writing", "Book Test", "Spelling Bee", "Pencil Drawing(girls)", "Water Colouring(girls)", "Story Writing(girls)", "Sudoku", "Origami(girls)"],
-    "Campus Boys": ["MAPPILAPPATTU","MADHU GANAM","ELOCUTION (MALAYALAM)","ELOCUTION (ENGLISH)","ESSAY WRITING (MALAYALAM)","ESSAY WRITING (ENGLISH)","STORY WRITING (MALAYALAM)","POEM MAKING (MALAYALAM)","POEM MAKING (ENGLISH)","PENCIL DRAWING","WATER COLOURING","BOOK TEST","E POSTER","DEBATE","AI PROMPTING"],
-    "Campus Girls": ["ESSAY WRITING (MALAYALAM)","ESSAY WRITING (ENGLISH)","STORY WRITING (MALAYALAM)","STORY WRITING (ENGLISH)","POEM MAKING (MALAYALAM)","POEM MAKING (ENGLISH)","PENCIL DRAWING","WATER COLOURING","CALLIGRAPHY (ARABIC)"],
-    "Campus General":["QUIZ(girls)" ,"QUIZ" ,"VLOG","CAMPUS MAGAZINE","IDEATHON"]
+    "Senior": [
+  "Speech (English)",
+  "Speech (Arabic)",
+  "Speech (Malayalam)",
+  "Madh Song",
+  "Mappila Song",
+  "Thadrees",
+  "Caption Writing",
+  "Essay Writing",
+  "Poster Designing (Digital)",
+  "Calligraphy",
+  "Ibarath Reading",
+  "Book Test",
+  "Reels Making",
+  "Translation (Arabic-English)",
+  "Hadees Musabaqa",
+  "Madh Song Writing",
+  "Qira’ath"
+],
+
+"Junior": [
+  "Speech (English)",
+  "Speech (Arabic)",
+  "Speech (Malayalam)",
+  "Madh Song",
+  "Mappila Song",
+  "Caption Writing",
+  "Story Writing",
+  "Poem Writing",
+  "Essay Writing",
+  "Madh Song Writing",
+  "Calligraphy",
+  "Ibarath Reading",
+  "Hand Writing (Arabi Malayalam)",
+  "Hifz",
+  "Book Test",
+  "Drawing",
+  "Story Telling"
+],
+
+"Sub Junior": [
+  "Speech (Malayalam)",
+  "Madh Song",
+  "Mappila Song",
+  "Drawing (Pencil)",
+  "Water Colouring",
+  "Qira’ath",
+  "Hifz",
+  "Arabic Malayalam",
+  "Hand Writing (Arabic)",
+  "Book Test",
+  "Hand Writing (Malayalam)",
+  "Spelling Bee",
+  "Hand Writing (English)",
+  "Ganitha Keli",
+  "News Reading",
+  "Reading (Malayalam)",
+  "Memory Test"
+],
+
+"General": [
+  "Nasheeda",
+  "Burudha",
+  "Akshra Shlokam",
+  "Qawali",
+  "Quiz",
+  "Spot Magazine",
+  "Alfiya Baith",
+  "Group Song",
+  "Debate"
+]
 };
 
 
@@ -172,4 +232,5 @@ function showMessage(msg, type) {
 }
 
 // പേജ് ലോഡ് ചെയ്യുമ്പോൾ നിലവിലുള്ള ഡാറ്റ ലോഡ് ചെയ്യുക
+
 window.onload = loadExistingData;
